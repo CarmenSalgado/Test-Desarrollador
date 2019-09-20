@@ -22,7 +22,7 @@
 *
 **/
 
-public class TestControlador {
+public class TestPrincipal {
     
  
 

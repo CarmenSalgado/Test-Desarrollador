@@ -1,6 +1,6 @@
 /**
 *
-* Clase: Singleton
+* Clase: ControladorPersonal
 *
 * versión:0.1
 *
@@ -22,6 +22,6 @@
 *
 **/
 
-public class ComponenteSingleton {
+public class ControladorEmpleadoPotencial {
 
 }

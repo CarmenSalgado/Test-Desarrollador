@@ -1,3 +1,5 @@
+package edu.cecar.test;
+
 /**
 *
 * Clase: TestControlador
@@ -21,9 +23,8 @@
 * ESTA CLASE PERMITE TESTEAR LOS SERVIDORES DEL SOFTWARE...
 *
 **/
-package edu.cecar.test;
 
-import edu.cecar.servidores.ServidorBaseDato;
+import edu.cecar.servidores.ServidorGoRest;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.IOException;
@@ -37,9 +38,10 @@ public class TestServidores {
         // TODO code application logic here
      
         try {
-            new ServidorBaseDato();
+            new ServidorGoRest();
         } catch (Exception e) {
            
+            System.err.println(" ERROR: "+e);
           Logger.getLogger(TestServidores.class.getName()).log(Level.SEVERE, null, e);
         }
         

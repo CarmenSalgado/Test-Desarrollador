@@ -55,9 +55,45 @@ public class SocketCliente {
          Logger.getLogger(SocketCliente.class.getName()).log(Level.SEVERE, null, ex);
      }
       
-  
-    
-   
-  
   }
+   
+   public void cerrarSocket() {
+   	
+    try {
+      			
+      socket.close();
+     			
+    }catch (Exception e) {
+     			
+      e.printStackTrace();
+     }
+     		
+   }
+   
+   public Socket getSocket() {
+        return socket;
+   }
+
+    public void setSocket(Socket socket) {
+        this.socket = socket;
+    }
+
+    public BufferedReader getEntrada() {
+        return entrada;
+    }
+
+    public void setEntrada(BufferedReader entrada) {
+        this.entrada = entrada;
+    }
+
+    public PrintWriter getSalida() {
+        return salida;
+    }
+
+    public void setSalida(PrintWriter salida) {
+        this.salida = salida;
+    }
+  
+  
+     
 }

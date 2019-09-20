@@ -1,10 +1,11 @@
+package edu.cecar.servidores;
 /**
 *
-* Clase: ControladorPersonal
+* Clase: ServidorBD
 *
 * versión:0.1
 *
-* fecha Creación: 19/09/2019
+* fecha Creación: 15/09/2019
 *
 * fecha Modificación: 19/09/2019
 *
@@ -22,6 +23,14 @@
 *
 **/
 
-public class ControladorPersonal {
+public class ServidorGoRest {
+
+ public ServidorGoRest() {
+ 
+ 
+ 
+ }
+    
+ 
 
 }
