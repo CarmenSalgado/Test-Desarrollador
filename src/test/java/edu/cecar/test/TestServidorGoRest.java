@@ -29,7 +29,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.IOException;
 
-public class TestServidores {
+public class TestServidorGoRest {
 
     /**
      * @param args the command line arguments
@@ -42,7 +42,7 @@ public class TestServidores {
         } catch (Exception e) {
            
             System.err.println(" ERROR: "+e);
-          Logger.getLogger(TestServidores.class.getName()).log(Level.SEVERE, null, e);
+          Logger.getLogger(TestServidorGoRest.class.getName()).log(Level.SEVERE, null, e);
         }
         
     }

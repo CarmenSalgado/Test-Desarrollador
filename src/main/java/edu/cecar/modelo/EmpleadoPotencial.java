@@ -1,4 +1,5 @@
 package edu.cecar.modelo;
+
 /**
 *
 * Clase: EmpleadoPotencial
@@ -19,106 +20,160 @@ package edu.cecar.modelo;
 *
 **//**
 *
-* ESTA CLASE PERMITE...
+* ESTA CLASE PERMITE CREAR LOS MODIFICADORES DE ACCESO GET Y SET, ADEMÁS DE LAS VARIABLES...
 *
 **/
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class EmpleadoPotencial {
     
- private int phone;
- private String first_name, 
-                last_name, 
-                gender,
-                dob, 
-                email,
-                website,
-                address, 
-                status;
+ private int identificador;
+ private String users,posts,comments,photos,albums;
+// private String first_name,last_name,gender,dob,email,phone,website,address,status;
+  private Map<Integer,String> mapfirst_name = new HashMap<>();
+  private Map<Integer,String> maplast_name = new HashMap<>();
+  private Map<Integer,String> mapgender = new HashMap<>();
+  private Map<Integer,String> mapdob = new HashMap<>();
+  private Map<Integer,String> mapemail = new HashMap<>();
+  private Map<Integer,String> mapphone = new HashMap<>();
+  private Map<Integer,String> mapwebsite = new HashMap<>();
+  private Map<Integer,String> mapaddress = new HashMap<>();
+  private Map<Integer,String> mapstatus = new HashMap<>();
 
-    public EmpleadoPotencial(int phone, String first_name, String last_name, String gender, String dob, String email, String website, String address, String status) {
-        this.phone = phone;
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.gender = gender;
-        this.dob = dob;
-        this.email = email;
-        this.website = website;
-        this.address = address;
-        this.status = status;
+    public EmpleadoPotencial(int identificador, String users, String posts, String comments, String photos, String albums) {
+        this.identificador = identificador;
+        this.users = users;
+        this.posts = posts;
+        this.comments = comments;
+        this.photos = photos;
+        this.albums = albums;
     }
 
-    public int getPhone() {
-        return phone;
+    public int getidentificador() {
+        return identificador;
     }
 
-    public void setPhone(int phone) {
-        this.phone = phone;
+    public void setidentificador(int identificador) {
+        this.identificador = identificador;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getUsers() {
+        return users;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setUsers(String users) {
+        this.users = users;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getPosts() {
+        return posts;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setPosts(String posts) {
+        this.posts = posts;
     }
 
-    public String getGender() {
-        return gender;
+    public String getComments() {
+        return comments;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 
-    public String getDob() {
-        return dob;
+    public String getPhotos() {
+        return photos;
     }
 
-    public void setDob(String dob) {
-        this.dob = dob;
+    public void setPhotos(String photos) {
+        this.photos = photos;
     }
 
-    public String getEmail() {
-        return email;
+    public String getAlbums() {
+        return albums;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setAlbums(String albums) {
+        this.albums = albums;
     }
 
-    public String getWebsite() {
-        return website;
+    public Map<Integer, String> getMapfirst_name() {
+        return mapfirst_name;
     }
 
-    public void setWebsite(String website) {
-        this.website = website;
+    public void setMapfirst_name(Map<Integer, String> mapfirst_name) {
+        this.mapfirst_name = mapfirst_name;
     }
 
-    public String getAddress() {
-        return address;
+    public Map<Integer, String> getMaplast_name() {
+        return maplast_name;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setMaplast_name(Map<Integer, String> maplast_name) {
+        this.maplast_name = maplast_name;
     }
 
-    public String getStatus() {
-        return status;
+    public Map<Integer, String> getMapgender() {
+        return mapgender;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setMapgender(Map<Integer, String> mapgender) {
+        this.mapgender = mapgender;
     }
- 
+
+    public Map<Integer, String> getMapdob() {
+        return mapdob;
+    }
+
+    public void setMapdob(Map<Integer, String> mapdob) {
+        this.mapdob = mapdob;
+    }
+
+    public Map<Integer, String> getMapemail() {
+        return mapemail;
+    }
+
+    public void setMapemail(Map<Integer, String> mapemail) {
+        this.mapemail = mapemail;
+    }
+
+    public Map<Integer, String> getMapphone() {
+        return mapphone;
+    }
+
+    public void setMapphone(Map<Integer, String> mapphone) {
+        this.mapphone = mapphone;
+    }
+
+    public Map<Integer, String> getMapwebsite() {
+        return mapwebsite;
+    }
+
+    public void setMapwebsite(Map<Integer, String> mapwebsite) {
+        this.mapwebsite = mapwebsite;
+    }
+
+    public Map<Integer, String> getMapaddress() {
+        return mapaddress;
+    }
+
+    public void setMapaddress(Map<Integer, String> mapaddress) {
+        this.mapaddress = mapaddress;
+    }
+
+    public Map<Integer, String> getMapstatus() {
+        return mapstatus;
+    }
+
+    public void setMapstatus(Map<Integer, String> mapstatus) {
+        this.mapstatus = mapstatus;
+    }
+
+    
+    
+   
      
 
 }

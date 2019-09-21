@@ -20,13 +20,15 @@ package edu.cecar.servidores;
 *
 **//**
 *
-* ESTA CLASE PERMITE...
+* ESTA CLASE CONTIENE EL SERVIDOR CLIENTE...
 *
 **/
 
 import edu.cecar.componentes.comunicacion.SocketCliente;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -39,7 +41,7 @@ public class ServidorCliente {
    Object result = null;
      try {
          result = new Object();
-         socketCliente = new SocketCliente(direccionIP, id);
+         socketCliente = new SocketCliente(direccionIP, 15000);
          
          //SALIDA: SOLICITA UN SERVICIO Y ESPERA EL RESULTADO//
          socketCliente.getSalida().println(opcion + "," + id);
@@ -53,8 +55,8 @@ public class ServidorCliente {
              
          } else if(opcion.equals("TODOS")) {
             
-            
-            
+             Map<String,ArrayList<String[]> >mapVerTodos = VisualizarTodos(resultServicio);
+             result = mapVerTodos;
          }
          
      }catch (IOException ex) {
@@ -66,20 +68,43 @@ public class ServidorCliente {
 
     private ArrayList<String[]> resultArraylist(String resultServicio){
         
-     ArrayList<String[]> arrayList = new ArrayList<String[]>();
-     //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-      String[] array = resultServicio.split("");
-        if (array[0].length()> 0 && !array[0].equals("")) {
-            
-            for (String registros : array) {
-             
-             //OBTENER Y AGREGAR LOS REGISTROS AL ARRAYLIST//
-             String[] columna = registros.split("");
-             arrayList.add(columna);
+        ArrayList<String[]> arrayList = null;
+        try {
+            arrayList = new ArrayList<String[]>();
+            //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            String[] array = resultServicio.split("");
+            if (array[0].length() > 0 && !array[0].equals("")) {
+                
+                for (String registros : array) {
+
+                    //OBTENER Y AGREGAR LOS REGISTROS AL ARRAYLIST//
+                    String[] columna = registros.split("");
+                    arrayList.add(columna);
+                }
+                
             }
-            
-        }
+        }catch (Exception e) {
+           e.printStackTrace();
+         }
      return arrayList;
+    }
+
+    private Map<String, ArrayList<String[]>> VisualizarTodos(String resultServicio)throws Exception  {
+     //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+     Map<String, ArrayList<String[]>> mapTodos = new HashMap<>();
+      String[] array = resultServicio.split("/");
+      
+      mapTodos.put("first_name", resultArraylist(array[0]));
+      mapTodos.put("last_name", resultArraylist(array[0]));
+      mapTodos.put("gender", resultArraylist(array[0]));
+      mapTodos.put("dob", resultArraylist(array[0]));
+      mapTodos.put("email", resultArraylist(array[0]));
+      mapTodos.put("phone", resultArraylist(array[0]));
+      mapTodos.put("website", resultArraylist(array[0]));
+      mapTodos.put("address", resultArraylist(array[0]));
+      mapTodos.put("status", resultArraylist(array[0]));
+      
+     return mapTodos;
     }
 
 }
