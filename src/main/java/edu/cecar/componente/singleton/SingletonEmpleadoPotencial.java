@@ -26,14 +26,20 @@ package edu.cecar.componente.singleton;
 public final class SingletonEmpleadoPotencial {
     
  private static SingletonEmpleadoPotencial singletonEmpleadoPotencial;
+ public SingletonEmpleadoPotencial(Object object) {
+        if (singletonEmpleadoPotencial==null) {
+       
+       singletonEmpleadoPotencial = new SingletonEmpleadoPotencial("");
+   }
+    }
   public static SingletonEmpleadoPotencial getSingletonEmpleadoPotencial() {
      
-   if (singletonEmpleadoPotencial==null) {
-       
-       singletonEmpleadoPotencial = new SingletonEmpleadoPotencial();
-   }
+   singletonEmpleadoPotencial = new SingletonEmpleadoPotencial(null);
+   
    return singletonEmpleadoPotencial;
   }
+
+    
     
  
 

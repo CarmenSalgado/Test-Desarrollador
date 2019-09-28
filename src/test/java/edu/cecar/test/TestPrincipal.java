@@ -5,7 +5,8 @@
  */
 package edu.cecar.test;
 
-import edu.cecar.vista.Principal;
+import edu.cecar.vistas.Principal;
+import edu.cecar.componente.singleton.SingletonEmpleadoPotencial;
 
 /**
  *
@@ -40,6 +41,10 @@ public class TestPrincipal {
         }
         //</editor-fold>
 
+        //Se LLama al singleton//
+        SingletonEmpleadoPotencial sep = new SingletonEmpleadoPotencial(null);
+        sep = new SingletonEmpleadoPotencial("https://gorest.co.in/public-api/users?_format=json&access-token=Ey58xRGjLnmr4tR3VHULDArouD-JZknca5B-");
+        System.out.println("edu.cecar.test.TestPrincipal.main()");
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

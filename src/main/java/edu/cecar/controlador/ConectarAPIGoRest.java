@@ -1,4 +1,4 @@
-package edu.cecar.controlador.conectarAPIGoRest;
+package edu.cecar.controlador;
 
 /**
 *
@@ -65,7 +65,7 @@ public class ConectarAPIGoRest {
         String stringToHash = timeStamp + PRIVATEKEY + PUBLICKEY;
         String hash = DigestUtils.md5Hex(stringToHash);
         String url = "";
-        url = String.format(" ", timeStamp, PUBLICKEY, hash, numeroRegistros);
+        url = String.format("E:\\CS\\CECAR\\2019-2\\D2\\20192\\TestDesarrolladorr\\lib\\recursos\\GoRest.properties", timeStamp, PUBLICKEY, hash, numeroRegistros);
 
         return new Resty().json(url).object();
 
